@@ -199,7 +199,15 @@
         <!-- <h4 style="text-align:center;">[<a href="#">Paper</a>] [<a href="pdfs/appendix.pdf">Appendix</a>]</h4> -->
         <h2 style="text-align:center;">Abstract</h2>
         <div style="text-align: justify;">
-           With the help of discrete neural audio codecs, large language models (LLM) have increasingly been recognized as a promising methodology for zero-shot Text-to-Speech (TTS) synthesis. However, sampling based decoding strategies bring astonishing diversity to generation, but also pose robustness issues such as typos, omissions and repetition. In addition, the high sampling rate of audio also brings huge computational overhead to the inference process of autoregression. To alleviate these issues, we propose <b>VALL-E R</b>, which is a robust and efficiency zero-shot TTS system. Specifically, it introduces phoneme monotonic alignment strategy to enhance the connection between phonemes and acoustic sequence. And merge codec is adopt to downsample the discrete codes in shallow layer without affecting the speech quality. Benefit from these strategies, VALL-E R obtains controllablity over phonemes and demonstrates its strong robustness by approaching the WER of ground truth in experimental results. In addition, it requires fewer autoregressive steps during inference, resulting in over 60\% time savings in inference time.
+           <!-- With the help of discrete neural audio codecs, large language models (LLM) have increasingly been recognized as a promising methodology for zero-shot Text-to-Speech (TTS) synthesis. However, sampling based decoding strategies bring astonishing diversity to generation, but also pose robustness issues such as typos, omissions and repetition. In addition, the high sampling rate of audio also brings huge computational overhead to the inference process of autoregression. To alleviate these issues, we propose <b>VALL-E R</b>, which is a robust and efficiency zero-shot TTS system. Specifically, it introduces phoneme monotonic alignment strategy to enhance the connection between phonemes and acoustic sequence. And merge codec is adopt to downsample the discrete codes in shallow layer without affecting the speech quality. Benefit from these strategies, VALL-E R obtains controllablity over phonemes and demonstrates its strong robustness by approaching the WER of ground truth in experimental results. In addition, it requires fewer autoregressive steps during inference, resulting in over 60\% time savings in inference time. <br> -->
+
+          With the help of discrete neural audio codecs, large language models (LLM) have increasingly been recognized as a promising methodology for zero-shot Text-to-Speech (TTS) synthesis. 
+          However, sampling based decoding strategies bring astonishing diversity to generation, but also pose robustness issues such as typos, omissions and repetition. In addition, the high sampling rate of audio also brings huge computational overhead to the inference process of autoregression. 
+          To address these issues, we propose <b>VALL-E R</b>, a robust and efficient zero-shot TTS system, building upon the foundation of VALL-E. Specifically, we introduce a phoneme monotonic alignment strategy to strengthen the connection between phonemes and acoustic sequence, ensuring a more precise alignment by constraining the acoustic tokens to match their associated phonemes.
+          Furthermore, we employ a merge codec approach to downsample the discrete codes in shallow quantization layer, thereby accelerating the decoding speed while preserving the high quality of speech output. 
+          Benefiting from these strategies, VALL-E R obtains controllablity over phonemes and demonstrates its strong robustness by approaching the WER of ground truth in experimental results. In addition, it requires fewer autoregressive steps during inference, resulting in over 60\% time savings in inference time. <br>
+
+           This page is for <b>research demonstration purposes only</b>.
         </div>
       </p>
     </div>
@@ -408,8 +416,6 @@
 
 
 
-
-
     <div class="content">
       <h2 style="text-align: center;">Samples for Hard Samples</h2>
       <div style="text-align: justify;">
@@ -456,11 +462,20 @@
       </div>
       </div>
     </div> 
-
-
-
-
     </div>
+
+    <div class="content">
+      <h2 id="model-overview" style="text-align: center;">Ethics Statement</h2>
+      <body>
+<!--       <p style="text-align: center;">
+        <img src="picture/valler_overview.png" style="width: 60vw; margin-left: 0vw;">
+      </p> -->
+        <div style="text-align: justify;">
+          Since VALL-E R could synthesize speech that maintains speaker identity, it may carry potential risks in misuse of the model, such as spoofing voice identification or impersonating a specilic speaker. We conducted the experiments under the asumption that the user agree to be the taret speaker in speech synthesis. If the model is generalized to unseen speakers in the real world, it should include a protocol to ensure that the speaker approves the use of their voice and a synthesized speech detection model.
+        </div>
+      </body>
+    </div>
+
 
     <p style="text-align: center;">
     <img src="https://badges.toozhao.com/badges/01HA67SWK6D6DXDCHXN8WKQ8HQ/green.svg" />
